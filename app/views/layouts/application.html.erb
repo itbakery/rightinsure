@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Rightinsure" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rightinsure" %>">
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <%= image_tag 'right/rightlogo.png' %>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+
+        <div class="col-sm-4">
+          <%= image_tag 'right/callcenter.png' %>
+
+        </div>
+      </div>
+    </div> <!--end containner -->
+  <header class="navbar navbar-inverse  bs-docs-nav" role="banner">
+    <div class="container">
+      <%= render 'layouts/navigation' %>
+    </div>
+  </header>
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+    <div class="carousel slide" id="myCarousel">
+
+    </div> <!-- end myCarousel -->
+    <div class="row" id="bigCallout">
+
+    </div> <!-- end bigCallout-->
+    <div class="row" id="featuresHeading">
+
+    </div> <!--end of featuresHeading-->
+  </div>
+  <footer id="footer">
+       <%= render 'layouts/footer' %>
+  </footer>
+  <section id="footer-menu">
+    <%= render 'layouts/footer_menu' %>
+  </section>
+  </body>
+  </html>
